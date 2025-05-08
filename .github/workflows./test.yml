@@ -8,6 +8,7 @@ on:
     
 jobs:
   Explore-GitHub-Actions:
+    environment: ${{ github.ref == 'refs/heads/main' && 'value_for_main_branch' || 'tada' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
