@@ -8,7 +8,7 @@ on:
     
 jobs:
   Explore-GitHub-Actions:
-    environment: ${{ github.ref == 'refs/heads/mainz' && 'zvalue_for_main_branch' || '' }}
+    environment: ${{ github.ref == 'refs/heads/main' && 'zvalue_for_main_branch' || '' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event. ${{ github.event.payload.action }} !!!"
